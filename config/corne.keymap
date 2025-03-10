@@ -13,6 +13,7 @@
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp DOT>, <&kp COLON>;
+
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
@@ -21,7 +22,11 @@
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp COMMA>, <&kp SEMICOLON>;
+
         mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    behaviors {
     };
 
     keymap {
@@ -36,10 +41,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB     &kp Q  &kp C  &kp O         &kp P             &kp W        &kp J      &kp M      &kp D  &kp EXCLAMATION  &kp Y  &kp BSPC
-&kp ESCAPE  &kp A  &kp S  &kp E         &kp N             &kp F        &kp L      &kp R      &kp T  &kp I            &kp U  &kp RETURN
-&kp LSHFT   &kp Z  &kp X  &kp QUESTION  &kp V             &kp B        &kp COLON  &kp H      &kp G  &kp SEMICOLON    &kp K  &kp RIGHT_SHIFT
-                          &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL    &mo 1      &kp SPACE  &mo 2
+&kp TAB     &kp Q  &kp C  &kp O         &kp P             &kp W        &kp J     &kp M      &kp D  &kp EXCLAMATION  &kp Y  &kp BSPC
+&kp ESCAPE  &kp A  &kp S  &kp E         &kp N             &kp F        &kp L     &kp R      &kp T  &kp I            &kp U  &kp RETURN
+&kp LSHFT   &kp Z  &kp X  &kp QUESTION  &kp V             &kp B        &per_col  &kp H      &kp G  &com_semi        &kp K  &kp RIGHT_SHIFT
+                          &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL    &mo 1     &kp SPACE  &mo 2
             >;
         };
 
@@ -52,10 +57,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp TAB       &kp HOME           &kp UP_ARROW  &kp END          &kp PAGE_UP      &kp SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &trans
-&trans  &kp CAPSLOCK  &kp LEFT           &kp DOWN      &kp RIGHT        &kp PAGE_DOWN    &kp MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans
-&trans  &trans        &kp C_VOLUME_DOWN  &kp K_MUTE    &kp C_VOLUME_UP  &kp DEL          &kp KP_COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT          &trans
-                                         &trans        &trans           &trans           &trans        &trans           &trans
+&trans  &kp TAB       &kp HOME           &kp UP_ARROW  &kp END          &kp PAGE_UP      &kp SLASH  &kp N7        &kp N8        &kp N9        &trans           &trans
+&trans  &kp CAPSLOCK  &kp LEFT           &kp DOWN      &kp RIGHT        &kp PAGE_DOWN    &kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_NUMBER_0  &trans
+&trans  &trans        &kp C_VOLUME_DOWN  &kp K_MUTE    &kp C_VOLUME_UP  &kp DEL          &kp COMMA  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT          &trans
+                                         &trans        &trans           &trans           &trans     &trans        &trans
             >;
         };
 
@@ -68,9 +73,9 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DLLR         &kp PRCNT    &kp AT_SIGN    &kp AMPS         &kp ASTERISK   &kp SQT    &kp GRAVE              &trans
-&trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL    &kp BACKSLASH  &kp PLUS         &kp MINUS      &kp SLASH  &kp LS(DOUBLE_QUOTES)  &trans
-&trans  &kp TILDE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDER        &kp HASH     &kp PIPE       &kp EXCLAMATION  &kp SEMICOLON  &kp COLON  &kp QUESTION           &trans
+&trans  &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DLLR         &kp PRCNT    &kp AT_SIGN    &kp AMPS         &kp ASTERISK   &kp SQT    &kp GRAVE          &trans
+&trans  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL    &kp BACKSLASH  &kp PLUS         &kp MINUS      &kp SLASH  &kp DOUBLE_QUOTES  &trans
+&trans  &kp TILDE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDER        &kp HASH     &kp PIPE       &kp EXCLAMATION  &kp SEMICOLON  &kp COLON  &kp QUESTION       &trans
                                               &trans                 &trans           &trans       &trans         &trans           &trans
             >;
         };
