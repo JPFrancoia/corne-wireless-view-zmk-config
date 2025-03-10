@@ -8,19 +8,20 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    macros {
-        per_col: period_colon {
-            label = "PERIOD_COLON";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp DOT>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
+    per_col: period_colon {
+        label = "PERIOD_COLON";
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp DOT>, <&kp COLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    com_semi: comma_semicolon {
+        label = "COMMA_SEMICOLON";
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp COMMA>, <&kp SEMICOLON>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
     keymap {
