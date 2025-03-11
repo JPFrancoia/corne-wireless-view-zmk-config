@@ -13,7 +13,7 @@
         label = "PERIOD_COLON";
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp DOT>, <&kp COLON>;
+        bindings = <&kp COLON>, <&kp DOT>;  // Swapped COLON and DOT
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
